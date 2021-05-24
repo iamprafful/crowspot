@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".ScanActivity">
+
+    <TextView
+        android:id="@+id/userTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#92146C"
+        android:textColor="@color/colorWhite"
+        android:text="user2136"
+        android:textSize="18sp"
+        android:fontFamily="@font/comfortaa400"
+        android:paddingVertical="6dp"
+        android:paddingHorizontal="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"/>
+    <TextView
+        android:id="@+id/scanTv"
+        android:layout_below="@id/userTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/colorBlack"
+        android:text="TAP TO SCAN"
+        android:layout_marginTop="130dp"
+        android:textSize="18sp"
+        android:fontFamily="@font/comfortaa400"
+        android:paddingVertical="6dp"
+        android:paddingHorizontal="40dp"
+        android:layout_centerHorizontal="true"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:visibility="gone"
+        android:id="@+id/animation_view"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        app:lottie_rawRes="@raw/scanning"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true" />
+
+    <ImageView
+        android:id="@+id/scanIv"
+        android:visibility="visible"
+        android:onClick="startScan"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/scan"/>
+    <ImageView
+        android:onClick="newHotspot"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/fab"
+        android:layout_marginBottom="9dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
